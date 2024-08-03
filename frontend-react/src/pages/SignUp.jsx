@@ -165,7 +165,7 @@ export default function SignUp() {
               fontWeight: "bold",
             }}
           >
-            Sign In
+           <span className="sign"> Sign In</span>
           </Link>
         </div>
         <div
