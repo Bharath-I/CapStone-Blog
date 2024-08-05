@@ -13,7 +13,7 @@ export default function Home() {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const res = await fetch("https://capstone-blog-jjic.onrender.com/api/post/getPosts");
+        const res = await fetch("api/post/getPosts");
         if (!res.ok) {
           throw new Error("Failed to fetch posts");
         }

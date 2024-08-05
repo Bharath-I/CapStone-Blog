@@ -27,7 +27,7 @@ export default function UpdatePost() {
   useEffect(() => {
     try {
       const fetchPost = async () => {
-        const res = await fetch(`https://capstone-blog-jjic.onrender.com/api/post/getposts?postId=${postId}`);
+        const res = await fetch(`/api/post/getposts?postId=${postId}`);
         const data = await res.json();
         if (!res.ok) {
           console.log(data.message);
