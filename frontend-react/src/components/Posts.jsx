@@ -20,7 +20,7 @@ export default function DashPosts() {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`/api/post/getposts?userId=${currentUser._id}`);
+        const res = await fetch(`https://capstone-blog-jjic.onrender.com/api/post/getposts?userId=${currentUser._id}`);
         const data = await res.json();
         if (res.ok) {
           setUserPosts(data.posts);
@@ -46,7 +46,7 @@ export default function DashPosts() {
     setError(null);
     try {
       const res = await fetch(
-        `/api/post/getposts?userId=${currentUser._id}&startIndex=${startIndex}`
+        `https://capstone-blog-jjic.onrender.com/api/post/getposts?userId=${currentUser._id}&startIndex=${startIndex}`
       );
       const data = await res.json();
       if (res.ok) {
@@ -70,7 +70,7 @@ export default function DashPosts() {
     setError(null);
     try {
       const res = await fetch(
-        `/api/post/deletepost/${postIdToDelete}/${currentUser._id}`,
+        `https://capstone-blog-jjic.onrender.com/api/post/deletepost/${postIdToDelete}/${currentUser._id}`,
         {
           method: "DELETE",
         }

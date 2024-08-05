@@ -19,7 +19,7 @@ export default function DashComments() {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`/api/comment/getcomments`);
+        const res = await fetch(`https://capstone-blog-jjic.onrender.com/api/comment/getcomments`);
         const data = await res.json();
         if (res.ok) {
           setComments(data.comments);
@@ -45,7 +45,7 @@ export default function DashComments() {
     setError(null);
     try {
       const res = await fetch(
-        `/api/comment/getcomments?startIndex=${startIndex}`
+        `https://capstone-blog-jjic.onrender.com/api/comment/getcomments?startIndex=${startIndex}`
       );
       const data = await res.json();
       if (res.ok) {
@@ -69,7 +69,7 @@ export default function DashComments() {
     setError(null);
     try {
       const res = await fetch(
-        `/api/comment/deleteComment/${commentIdToDelete}`,
+        `https://capstone-blog-jjic.onrender.com/api/comment/deleteComment/${commentIdToDelete}`,
         {
           method: "DELETE",
         }
